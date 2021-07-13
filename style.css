@@ -10,7 +10,7 @@
     background-color: #001489;
     position: absolute;
     height: 30px;
-    z-index: 3;
+    z-index: 1;
 }
 .header_nav{
     color: white;
@@ -39,7 +39,7 @@
     font-weight: 500;
     position: absolute;
     top: 31px;
-    z-index: 3;
+    z-index: 1;
 }
 #nav_bar:hover{
     background-color: antiquewhite;
@@ -48,6 +48,7 @@
     display: flex;
     font-size: 19px;
     font-weight: 700;
+    z-index: 1;
 }
 .nav_icons_login{
     display: flex;
@@ -159,7 +160,7 @@ div.nav_icons_login > div:nth-child(3) > p{
     padding-left: 30px;
     padding-right: 30px;
     height: 530px;
-    z-index: 5;
+    z-index: 3;
 }
 .video{
     border: 0px solid;
@@ -170,18 +171,17 @@ div.nav_icons_login > div:nth-child(3) > p{
 .video_img img{
     width: 350px;
     height: 400px;
-    overflow: hidden;
+    
 }
 .video_img{
     transition: all 0.3s ease-in-out; 
-    overflow: hidden;
     width: 350px;
     height: 400px;
-    margin: 0px auto;
-
+    overflow: hidden;
 }
 .video_img img:hover{
     transform: scale(1.2);
+    transition: all 0.3s ease-in-out; 
 }
 
 .video_genre  p{
@@ -256,20 +256,23 @@ div.nav_icons_login > div:nth-child(3) > p{
 margin-left: 200px;
 }
 .news1_img{
+    position: absolute;
+    transition: all 0.3s ease-in-out; 
     overflow: hidden;
+    width: 730px;
+    height: 410px;
+    left: 200px;
 }
 .news1_img img{
     width: 730px;
     height: 410px;
-    position: absolute;
-    left: 200px;
+}
+.news1_img img:hover{
+    transform: scale(1.2);
     transition: all 0.3s ease-in-out; 
 }
 
-.news1_img img:hover{
-    transform: scale(1.03);
-    
-}
+
 .news_genre p{
     position: absolute;
     border: 0px solid;
@@ -353,16 +356,25 @@ margin-left: 200px;
     width: 700px;
     font-family: Helvetica,Arial,sans-serif;
 }
+.news3_img{
+    position: absolute;
+    left: 1330px;
+    overflow: hidden;
+    height: 410px;
+    width: 340px;
+    transition: all 0.3s ease-in-out; 
+}
 .news3_img img{
     height: 410px;
     width: 340px;
-    position: absolute;
-    left: 1330px;
-    transition: all 0.3s ease-in-out; 
+    
+    
 }
 .news3_img img:hover{
-    transform: scale(1.01);
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out; 
 }
+
 .news_title3 p{
     color: white;
     font-size: 23px;
@@ -395,14 +407,21 @@ margin-left: 200px;
     left: 590px;
 
 }
-.news4_img img{
+.news4_img{
     height: 410px;
     width: 340px;
-    transition: all 0.3s ease-in-out; 
+    overflow: hidden;
+}
+.news4_img img{
+    width: 350px;
+    height: 400px;
+    
 }
 .news4_img img:hover{
-    transform: scale(1.03);
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out; 
 }
+
 .news_title4 p{
     color: white;
     font-size: 23px;
@@ -434,15 +453,32 @@ margin-left: 200px;
     position: absolute;
     top: 530px;
     left: 975px;
+    overflow: hidden;
 }
 .news5_img img{
     width: 696px;
     height: 410px;
-    transition: all 0.3s ease-in-out;
+    
 }
 .news5_img img:hover{
-    transform: scale(1.01);
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
 }
+/* .video_img{
+    transition: all 0.3s ease-in-out; 
+    width: 350px;
+    height: 400px;
+    overflow: hidden;
+}
+.video_img img{
+    width: 350px;
+    height: 400px;
+}
+
+.video_img img:hover{
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out; 
+} */
 #news > div.news5 > div.news_genre > p{
     margin-left: 10px;
     position: absolute;
@@ -790,7 +826,7 @@ margin-left: 200px;
 
 .section_img_first{
     display: flex;
-    margin-left: 700px;
+    margin-left: 580px;
 }
 .first_img2 img{
     margin-left: 50px;
@@ -802,10 +838,10 @@ margin-left: 200px;
     margin-left: 220px;
 }
 .section_img_second{
-    margin-left: 500px;
+    margin-left: 210px;
 }
 .section_img_third{
-    margin-left: 625px;
+    margin-left: 420px;
 }
 .section_img{
     border: solid 1px black;
@@ -845,9 +881,7 @@ margin-left: 200px;
     margin-left: 200px;
 
 }
-.sns_icon{
 
-}
 .footer_main_links{
     display: flex;
 }
@@ -880,7 +914,11 @@ margin-left: 200px;
     width: 1905px;
     top: 30px;
     left: 8px;
+    background-color:white;
+    border: solid 1px black;
+    z-index: 3;
 }
+
 .about_chelsea p{
     font-family: "Basis Grotesque Medium",Arial,Helvetica,sans-serif;
     font-weight: 500;
@@ -889,14 +927,16 @@ margin-left: 200px;
     font-size: .75rem;
     line-height: 1.5;
     color: #001489;
+    z-index: 3;
+    
 }
 .about_chelsea_hidden_bar{
     position: absolute;
     left: 0px;
+    background-color:white;
+    z-index: 3;
 }
-#nav_bar > div.nav_bar_img > img{
-    z-index: 1;
-}
+
 .about_chelsea1{
     margin-left: 340px;
     border: solid 2px rgb(199, 197, 197);
@@ -904,7 +944,7 @@ margin-left: 200px;
     border-top-width: 0px;
     border-bottom-width: 0px;
     padding-right: 50px;
-
+    z-index: 3;
 }
 .about_chelsea2{
     margin-left: 40px;
@@ -913,6 +953,7 @@ margin-left: 200px;
     border-top-width: 0px;
     border-bottom-width: 0px;
     padding-right: 50px;
+    z-index: 3;
 }
 .about_chelsea3{
     margin-left: 40px;
@@ -921,28 +962,28 @@ margin-left: 200px;
     border-top-width: 0px;
     border-bottom-width: 0px;
     padding-right: 50px;
+    z-index: 3;
 }
 .about_chelsea4{
     margin-left: 40px;
+    z-index: 3;
 }
 .nav_bar_JS{
     display: flex;
     position: absolute;
     width: 1905px;
     height: 40px;
-    top: 122px;
+    top: 119px;
     left: 8px;
     background-color: white;
     border: 2px solid black;
     border-left-width: 0px;
-    border-top-width: 2px;
+    border-top-width: 0px;
     border-bottom-width: 0px;
     border-right-width: 0px;
     
 }
-#nav_bar:hover{
-    background-color: white;
-}
+
 .nav_bar_JS p{
     margin-left: 30px;
     font-family: "Basis Grotesque Bold",Arial,Helvetica,sans-serif;
@@ -954,8 +995,17 @@ margin-left: 200px;
     text-transform: uppercase;
     cursor: pointer;
     margin-top: 2px;
-    
+    background-color: white;
 }
+.about_chelsea_hidden_bar{
+    background-color: white;
+    z-index: 3;
+}
+#usingJS > div.nav_bar_JS.hidden{
+    top: 112px;
+    border-top-width: 2px;
+}
+
 .nav_bar_JS p:hover{
     text-decoration: underline 2px blue;
 }
@@ -981,9 +1031,13 @@ margin-left: 200px;
 .footer_main_link p:hover {
     color: skyblue;
 }
-
-
-
+#usingJS > div.about_chelsea_hidden_bar.hidden > div{
+    background-color: white;
+}
+#nav_bar{
+    width: 1903px;
+    height: 80px;
+}
 .slider{
     width: 100%;
     position: relative;
@@ -1003,11 +1057,22 @@ margin-left: 200px;
 .slider_item:nth-child(even){
     background-color: red;
 }
-.showing{
-    z-index: 1;
-}
+
 .slder_item img{
     width: 1903px;
     height: 650px;
 }
-
+.section_img img{
+    width: 200px;
+}
+#nav_bar > div.nav_bar_img > img{
+    z-index: 4;
+}
+.nav_bar_img{
+    position: absolute;
+    z-index: 5;
+    top: 30px;
+}
+#nav_bar > div.nav_main > span:nth-child(1){
+    margin-left: 143px;
+}
