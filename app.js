@@ -107,22 +107,52 @@ navBarColor.addEventListener('mouseleave' , function(){
     navBarColorText13.style.color = "white"
 })
 
-const SHOWING_CLASS = "showing";
-const firstSlide = document.querySelector('#slider > div:nth-child(1)');
-function slide (){
-    const currentSlide = document.querySelector(`.${SHOWING_CLASS}`);
-    if(currentSlide){
-        currentSlide.classList.remove(SHOWING_CLASS);
-        const nextSlide = currentSlide.nextElementSibling;
-        if(nextSlide){
-            nextSlide.classList.add(SHOWING_CLASS)
-        }else{
-            firstSlide.classList.add(SHOWING_CLASS)
-        }
+// const SHOWING_CLASS = "showing";
+// const firstSlide = document.querySelector('#slider > div:nth-child(1)');
+// function slide (){
+//     const currentSlide = document.querySelector(`.${SHOWING_CLASS}`);
+//     if(currentSlide){
+//         currentSlide.classList.remove(SHOWING_CLASS);
+//         const nextSlide = currentSlide.nextElementSibling;
+//         if(nextSlide){
+//             nextSlide.classList.add(SHOWING_CLASS)
+//         }else{
+//             firstSlide.classList.add(SHOWING_CLASS)
+//         }
 
-    }else{
-        firstSlide.classList.add(SHOWING_CLASS)
-    }
+//     }else{
+//         firstSlide.classList.add(SHOWING_CLASS)
+//     }
+// }
+// slide();
+// setInterval(slide, 4000);
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
 }
-slide();
-setInterval(slide, 4000);
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("blogSlides");
+    var dots = document.getElementsByClassName("blogSlider__dots--dot");
+    if (n > slides.length) {
+    slideIndex = 1
+    }
+    if (n < 1) {
+    slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
